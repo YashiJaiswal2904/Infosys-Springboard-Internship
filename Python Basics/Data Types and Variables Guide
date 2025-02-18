@@ -1,0 +1,160 @@
+Ques:1
+What is the output of the following code?
+x = 10
+y = 3.14
+z = x + y
+print(type(z))
+o class 'str'
+o class 'complex'
+o class 'float'
+o class 'int'
+Ans:
+  class 'float'
+
+
+Ques:2
+What is the data type of num = '10'?
+o Boolean
+o Integer
+o String
+o Float
+Ans:
+  String
+
+
+Ques:3
+Which is the correct way of defining a string variable?
+o string age = 10
+o age = "Ten"
+o age = TRUE
+o age = 10
+Ans:
+  age = "Ten"
+
+
+Ques:4
+What will int('10.5') return?
+o Error
+o 0
+o 10.5
+o 10
+Ans:
+  Error.
+
+
+Ques:5
+Which is a valid variable name?
+o break
+o class
+o _variable
+o 2variable
+Ans:
+  _variable
+
+
+Ques:6
+What will be the output of the given python code?
+x = 10
+y = "20"
+print(x + int(y))
+o 30
+o Error
+o 10
+o 1020
+Ans:
+  30
+
+
+Ques:7
+Which function is used to check the type of a variable?
+o type()
+o checktype()
+o isType()
+o typeof()
+Ans:
+  type()
+
+
+Ques:8
+Which of the following is NOT a valid string declaration?
+o greeting = Hello
+o greeting = '''Hello'''
+o greeting = "Hello"
+o greeting = 'Hello'
+Ans:
+  greeting = Hello
+
+
+Ques:9
+What is the result of (0.1 + 0.2 == 0.3)?
+o None
+o True
+o False
+o Error
+Ans:
+  False
+
+
+Ques:10
+What will print(5+True) result in?
+o TypeError
+o ValueError
+o 5
+o 6
+Ans:
+  6
+
+
+Ques:11
+What will be output of print('2' * 3)?
+o '6'
+o '222'
+o TypeError
+o 6
+Ans:
+  '222'
+
+
+Ques:12
+What will the given python code evaluate to?
+x = True
+y = False
+print(x + y)
+o 1
+o 2
+o True
+o 0
+Ans:
+  1
+
+
+Ques:13
+What will be the output of the given python code?
+z = 10
+print(isinstance(z, int))
+o False
+o True
+o Error
+o 10
+Ans:
+  True
+
+
+Ques:14
+What does the isinstance() function return?
+o An object type
+o An integer (0 or 1)
+o A boolean (True or False)
+o None
+Ans:
+   A boolean (True or False)
+
+
+Ques:15
+What will be print(isinstance(str(42), str)) return?
+o True
+o None
+o False
+o Error
+Ans:
+  True
