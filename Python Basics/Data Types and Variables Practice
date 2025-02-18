@@ -1,0 +1,37 @@
+Ques:1
+Define a variable num with value 100 of integer data type.
+Ans:
+  num = 100
+  print(num)
+
+
+Ques:2
+Define a variable score with value 100 of float data type
+Ans:
+  score = 100.0
+  print(score)
+
+
+Ques:3
+Define a variable name of string data type with your first name.
+Ans:
+  name = "Datawars"
+  print(name)
+
+
+Ques:4
+Identify data type of variable result
+a = 42
+b = "42"
+c = 42.0
+resulta int(b) + c
+If your solution is class 'integer', write only integer.
+Ans:
+  a = 42
+  b = "42"
+  c = 42.0
+  result = a + int(b) + c
+  print(type(result))
+
+
+Ques:5
