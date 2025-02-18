@@ -1,0 +1,29 @@
+Ques:1
+Complete the code by filling in the missing parts to correctly implement the temperature categorization logic.
+Ans:
+  def temperature_category(temp):
+      if temp < 0:
+          return "Freezing"
+      elif temp < 10:
+          return "Cold"
+      elif temp < 20:
+          return "Cool"
+      elif temp < 30:
+          return "Warm"
+      else:
+          return "Hot"
+
+
+Ques:2
+Complete the code snippet to filter out even numbers from a list. Add the missing condition in the if statement to check whether a number is even .
+Ans:
+  def filter_even_numbers(numbers):
+      result = []
+      for num in numbers:
+          if num % 2 == 0:
+              result.append(num)
+      return result
+
+
+Ques:3
+Complete the code snippet to find the first number in the list that is a multiple of a given input.
