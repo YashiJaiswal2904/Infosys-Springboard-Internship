@@ -35,3 +35,110 @@ Ans:
 
 
 Ques:5
+Write a Python code to perform addition of two integers num1 = 10 and num2 = 20. Store the final sum in variable result. Also find the data type of the result.
+Ans:
+  num1 = 10
+  num2 = 20
+  result = num1 + num2
+  print(result)
+  print(type(result))
+
+
+Ques:6
+Write a code to convert all character of given text into upper-case. Store result in variable text_upper.
+Hello, I am Datawars. I help users to learn Data Science
+Ans:
+  text = 'Hello, I am Datawars. I help users to learn Data Science'
+  text_upper = text.upper()
+  print(text_upper)
+
+
+Ques:7
+Write a code to convert all character of given text into lower-case. Store the result in variable text_lower.
+PYTHON IS A PROGRAMMING LANGUAGE
+Ans:
+  text = 'PYTHON IS A PROGRAMMING LANGUAGE'
+  text_lower = text.lower()
+  print(text_lower)
+
+
+Ques:8
+Write a Python code to concatenate the strings first_name as Alice and last_name as Brown.
+Don't forget to give a space in between first name and last name. Store the full name in variable full_name.
+Ans:
+  first_name = "Alice"
+  last_name = "Brown"
+  full_name = first_name + " " + last_name
+  print(full_name)
+
+
+Ques:9
+Write a Python code to take a float percentage as 85.5, convert it to an integer, and then add 10 to it. Store the final output in a variable result.
+Ans:
+  percentage = 85.5
+  converted_percentage = int(percentage)
+  result = converted_percentage + 10
+  print(result)
+
+
+Ques:10
+Write a Python code to declare a variable student_info and assign it a multi-line string containing the student’s name as Alice, ID is 101, and score is 90.
+Print the variable student_info.
+Expected outcome:
+Name: Alice
+ID: 101
+Score: 90
+Ans:
+  student_info = """Name: Alice
+  ID: 101
+  Score: 90"""
+  print(student_info)
+
+
+Ques:11
+Write a Python code to declare two boolean variables attended_classes as True and submitted_assignment as False.
+Use the and operator to check if both are True. Store the value in variable result.
+Ans:
+  attended_classes = True
+  submitted_assignment = False
+  result = attended_classes and submitted_assignment
+  print(result)
+
+
+Ques:12
+Write a Python code to declare a string student_name as Alice.
+Store the first character and the last three characters of the string in variables first_char and last_three_chars respectively.
+Ans:
+  student_name = "Alice"
+  first_char = student_name[0]
+  last_three_chars = student_name[-3:]
+  print(first_char)
+  print(last_three_chars)
+
+
+Ques:13
+Write a Python code to reverse the string student_name as Alice and print the reversed name. Store the result in variable reversed_name.
+Ans:
+  student_name = "Alice"
+  reversed_name = student_name[::-1]
+  print(reversed_name)
+
+
+Ques:14
+Write a Python code to calculate the sum of the digits of a student’s ID (student_id = 123). Store the result in variable digit_sum.
+Do not use loops to solve the problem.
+Ans:
+  student_id = 123
+  digits = str(student_id)
+  digit_sum = int(digits[0]) + int(digits[1]) + int(digits[2])
+  print(digit_sum)
+
+
+Ques:15
+Write a Python code to calculate the final score of a student by taking their exam_score as 90 and assignment_score as 40.
+Multiply the exam_score by 0.6 and the assignment_score by 0.4, then add them together.Store the result in variable final_score.
+Ans:
+  exam_score = 90
+  assignment_score = 40
+  final_score = (exam_score * 0.6) + (assignment_score * 0.4)
+  print(final_score)
