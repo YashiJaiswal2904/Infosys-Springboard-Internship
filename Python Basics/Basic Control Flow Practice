@@ -27,3 +27,183 @@ Ans:
 
 Ques:3
 Complete the code snippet to find the first number in the list that is a multiple of a given input.
+Ans:
+  def find_first_multiple(numbers, multiple):
+      result = None
+      for num in numbers:
+          if num % multiple == 0:  # Check if num is a multiple of the input
+              result = num
+              break  # Exit the loop as soon as we find the first multiple
+      return result
+
+
+Ques:4
+Complete the code snippet to skip even numbers during processing.
+Ans:
+  def process_numbers(numbers):
+      total = 0
+      for num in numbers:
+          if num % 2 == 0:
+              continue
+          total += num
+      return total
+
+
+Ques:5
+Examine the mystery_output_1 function and predict the output based on the given conditions. Determine which path the code will follow based on the values of x and y.
+def mystery_output_1():
+    x = 10
+    y = 5
+    if x > 5:
+        print("Path 1") 
+    elif y<5:
+        print("Path 2")
+    else:
+        print("Path 3")
+o Path 2
+o Path 3
+o Path 1
+o Error
+Ans:
+  Path 1
+
+
+Ques:6
+Analyze the code snippet and predict the output of the mystery_output_2 function.
+def mystery_output_2(): 
+    count = 0
+    for i in range(5):
+        if i % 2 == 0:
+            count += 1
+        else:
+            count += 2
+    print(count)
+o 7
+o 5
+o 4
+o 3
+Ans:
+  5
+
+
+Ques:7
+Analyze the mystery_output_3 function and predict the output.
+def mystery_output_3():
+    total = 0
+    for i in range(10):
+        if i == 3:
+            continue
+        if i == 7:
+            break
+        total += i
+    print(total)
+o 18
+o 48
+o 45
+o 35
+Ans:
+  18
+
+
+Ques:8
+Examine the provided code snippet and predict the output
+x = 10
+y = 20
+z = 15
+if x > y:
+    result = "X is greater"
+elif y > z:
+    result = "Y is greater than Z"
+elif z > x:
+    result = "Z is greater than X"
+else:
+    result = "No condition is True"
+print(result)
+o None
+o Z is greater than X
+o X is greater
+o Y is greater than Z
+Ans:
+  Y is greater than Z
+
+
+Ques:9
+The code is intended to convert a temperature from Celsius to Fahrenheit. There is a mistake in the formula for conversion. Fix the formula to correctly convert Celsius to Fahrenheit.
+Formula to covert temperature from Celsius to Fahrenheit:
+                                  F = 9/5 C + 32
+Ans:
+  def temperature_conversion(celsius):  
+      fahrenheit = celsius * (9/5) + 32  # Fix the conversion formula
+      return fahrenheit
+
+
+Ques:10
+The code is intended to return the first even number from a list. However, there is an error in the code. Debug and fix the code to ensure it works correctly.
+Ans:
+  def find_first_even(numbers):
+      for num in numbers:
+          if num % 2 == 0:  # Fix the condition to check if num is even
+              return num  # Return the first even number
+      return None  # Return None if no even number is found
+
+
+Ques:11
+The code is designed to calculate grades based on a score, but it contains errors in the conditional statements. Debug and fix the code to ensure accurate grade calculations.
+Ans:
+  def grade_calculation(score): 
+      if score >= 90:  # Corrected the comparison for 'A'
+          return "A"
+      elif score >= 80: 
+          return "B" 
+      elif score >= 70:  # Added the missing colon
+          return "C"
+      elif score >= 60: 
+          return "D"
+      else: 
+          return "F"
+
+
+Ques:12
+The code is intended to calculate the sum of a list of numbers, but it contains errors in the loop and summation. Fix the code to ensure it correctly adds all numbers in the list.
+Ans:
+  def calculate_sum(numbers):
+      total = 0  # Initialize total to 0
+      for num in numbers:
+          total += num  # Add each number to total
+      return total
+
+
+Ques:13
+Write a function find_largest that takes three numbers as input and returns the largest of the three numbers.
+Ans:
+  def find_largest(a, b, c):
+      if a >= b and a >= c:
+          return a
+      elif b >= a and b >= c:
+          return b
+      else:
+          return c
+
+
+Ques:14
+Write a function divisible_by_3_or_5 that takes an upper limit as input and returns a list of all numbers from 0 to the given limit that are divisible by either 3 or 5.
+Ans:
+  def divisible_by_3_or_5(limit):
+      result = []
+      for number in range(limit + 1):
+          if number % 3 == 0 or number % 5 == 0:
+              result.append(number)
+      return result
+
+
+Ques:15
+Write a function is_prime that checks if a given number is prime. The function should return True if the number is prime and False otherwise.
+A number is prime if it is greater than 1 and divisible only by 1 and itself.
+Ans:
+  def is_prime(number):
+      if number <= 1:
+          return False
+      for i in range(2, int(number ** 0.5) + 1):
+          if number % i == 0:
+              return False
+      return True
