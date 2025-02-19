@@ -1,0 +1,187 @@
+Ques:1
+Which arithmetic operator is used to calculate the remainder of a division?
+o **
+o %
+o //
+o /
+Ans:
+  %
+
+
+Ques:2
+What is the significance of // in Arithmetic Operators?
+o It performs floor division (integer division).
+o It calculates the remainder of a division.
+o It calculates the square of a number.
+o It performs standard division.
+Ans:
+  It performs floor division (integer division).
+
+
+Ques:3
+Which logical operator returns True if at least one condition is True?
+o or
+o not
+o and
+Ans:
+  or
+
+
+Ques:4
+Evaluate the expression
+(5 > 3) or (2 < 1)
+o False
+o True
+Ans:
+  True
+
+
+Ques:5
+List1 = [1, 2, 3, 4]
+List2 = [2, 3, 4, 5]
+List3 = List1 + List2
+print(List3)
+o [1, 1, 3, 4, 2, 3, 4, 5]
+o [1, 2, 2, 3, 3, 4, 4, 5]
+o [1, 2, 3, 4, 2, 3, 4, 5]
+o [1, 2, 3, 4, 5]
+Ans:
+  [1, 2, 3, 4, 2, 3, 4, 5]
+
+
+Ques:6
+a = 5
+a %= 3
+print(a)
+o 1.67
+o 2
+o Error!
+o 3
+Ans:
+  2
+
+
+Ques:7
+What is the primary purpose of the walrus operator (:=) in Python?
+o To perform bitwise AND operation.
+o To create a new list comprehension.
+o To define a lambda function.
+o To assign a value to a variable within an expression.
+Ans:
+  To assign a value to a variable within an expression.
+
+
+Ques:8
+Alice is throwing a birthday party and wants to calculate the mean of everyone's age present in her birthday party. The age of people are stored in a list called, age_list.
+Calculate the average age using the arithmetic operators and store the result in a variable called avg_age.
+Ans:
+  age_list = [10, 15, 12, 13, 14, 14]
+  avg_age = sum(age_list) / len(age_list)
+  print(avg_age)
+
+
+Ques:9
+For the given values of a and b, find the correct arithmetic operators that can replace the X and Y in the expression given in the jupyter notebook, such that the value of c = 25.
+Also write operator used in place of X and Y.
+Ans:
+  a = 5
+  b = 3
+  c = (a ** b)//a
+  print(c)
+  X = '**'
+  Y = '//'
+
+
+Ques:10
+The code given in the jupyter notebook is used to calculate nth fibonacci series number using recursion. You need to complete the code using the correct set of arithmetic and assignment operators.
+Ans:
+  def Fibonacci(n):
+    if n < 0:
+        print("Incorrect input")
+        return None  
+    # Handle base cases
+    elif n == 0:
+        return 0
+    elif n == 1 or n == 2:
+        return 1
+    # Recursive case
+    result = 0
+    result += Fibonacci(n - 1)  # Add Fibonacci(n-1) to result
+    result += Fibonacci(n - 2)  # Add Fibonacci(n-2) to result
+    return result
+
+
+Ques:11
+Vidhi purchased 2 apples, 20 bananas, and 1 grape. The price for each apple is 50, each banana costs 5, and each grape costs 40.
+Calculate the total amount she spent and store the result in the variable total_bill.
+Ans:
+  # Prices of the fruits
+  apple_price = 50
+  banana_price = 5
+  grape_price = 40 
+  # Quantities of the fruits
+  apples = 2
+  bananas = 20
+  grapes = 1
+  # Calculate total bill
+  total_bill = (apples * apple_price) + (bananas * banana_price) + (grapes * grape_price)
+  # Output the total bill
+  print(total_bill) 
+
+
+Ques:12
+For the given python program to check if the year is a leap year or not, complete the code using the correct set of operators.
+Ans:
+  def leap_year(year):
+    # Check if it is a leap year
+    if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+        return True
+    else:
+        return False
+
+
+Ques:13
+For a given value of X, using operators write an expression to check if the value of X is greater than 10 and is even.
+Ans:
+  X = 16 
+  result = X > 10 and X % 2 == 0
+  print(result)
+
+
+Ques:14
+Which of the following expression would result in True?
+o (True or False) and not (False or False)
+o (True or False) or not (False or False)
+o not(True or False)
+o (True or False) and (False or False)
+Ans:
+  (True or False) and not (False or False) and (True or False) or not (False or False).
+
+
+Ques:15
+Fix the logical error in the code so it calculates the remainder when 100 is divided by 7.
+Ans:
+  result = 100 % 7 
+  print("The remainder is:", result)
+
+
+Ques:16
+Why does the following statement output Default on being executed?
+print({} or "Default")
+o Because Default is explicitly specified in the statement.
+o Because {} is falsy, so Python evaluates and returns Default.
+o Because the or operator always returns the second operand.
+o Because {} is truthy, so Python skips Default.
+Ans:
+  Because {} is falsy, so Python evaluates and returns Default.
+
+
+Ques:17
+Why does the following statement output hello on being executed?
+print(5 and 'hello')
+o Because hello is explicitly specified in the statement.
+o Because 5 is falsy, so Python evaluates and returns hello.
+o Because the and operator returns the last operand when both operands are truthy.
+o Because the and operator always returns the second operand.
+Ans:
+   Because the and operator returns the last operand when both operands are truthy.
