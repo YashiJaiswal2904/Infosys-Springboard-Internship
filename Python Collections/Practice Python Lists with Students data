@@ -1,0 +1,50 @@
+Ques:1
+Assume that you are compiling a list of mathematical constants, and you decide to represent all of them in a Python list, following this structure:
+maths_constants = [['name of constant', 'numeric value'],
+                   ['name of constant', 'numeric value'],
+                   ['name of constant', 'numeric value'],
+                   ...
+                ]
+As exemplified in the list maths_constants. However, upon review, you realize that you missed the value of Pi.
+Let's address this by first identifying its prospective index if it were included in the list, considering the alternating pattern of string constants and their numeric values.
+Store the index in the variable index_pi.
+Ans:
+  index_pi = maths_constants.index(['Pi'])
+  The method .index will search for the item Pi in our list and provide its index.
+
+
+Ques:2
+As you have found the index of the Pi, now you have to insert the value after the name Pi in the list.
+Your final complete list of mathematical constants including the value of Pi should be in the variable maths_constants.
+Input the value of Pi as 3.1416(in float)
+Ans:  
+  We have calculated the index of the Pi in the previous activity. Now we will use the method .insert() to insert the value of the Pi in the list.
+  maths_constants[index_pi].insert(1, 3.1416)
+  Here we have used the method .insert() to insert the value of the Pi in the list. 
+  The method .insert() takes two arguments, the first argument is the index where we want to insert the value and the second argument is the value we want to insert.
+
+
+Ques:3
+Add all the characters of our even_string to the end of our list odd_list.
+[!] Important:
+Do Not Use Loops and if else statements.
+Add each character of the string, not the whole string.
+After extending, the final result will be: [99, 101, 103, 105, 107, 109, '2', '4', '6', '8', '9']
+Ans:
+  odd_list.extend(even_string)
+  odd_list
+  The .extend method takes an iterable (another list, tuple, string, set) and adds its individual elements to the list on which it is applied. 
+  So, in our solution, the odd_list is extended with each character from the even_string string.
+
+
+Ques:4
+
+
+
+
+
+
+
+
+
+
