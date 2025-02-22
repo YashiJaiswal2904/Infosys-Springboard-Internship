@@ -1,0 +1,219 @@
+Ques:1
+Find the length of our fibo_seq tuple
+Enter your answer in the input box below as an integer.
+Ans:
+  We will use the method len() to find the length of our tuple.
+  fibo_len = len(fibo_seq)
+  fibo_len
+
+
+Ques:2
+Find the 12th element of the tuple fibo_seq and enter your answer in the input box below as an integer.
+Ans:
+  twelfth_element = fibo_seq[11]
+  twelfth_element
+  As indexing starts from 0, the 12th element will be at index 11.
+
+
+Ques:3
+Are 21 and 34 adjacent Fibonacci numbers? Adjacent Fibonacci numbers are two Fibonacci numbers that are next to each other in the sequence. For example, 3 and 5 are adjacent Fibonacci numbers, but 3 and 8 are not.
+o Yes
+o No
+Ans:
+  We can first find the index of 21 and 34 in the tuple fibo_seq and then check if they are adjacent.
+  index_21 = fibo_seq.index('21')
+  index_34 = fibo_seq.index('34')
+  if index_21 + 1 == index_34 or index_21 - 1 == index_34:
+      print("Yes")
+  else:
+      print("No")
+
+
+Ques:4
+The golden ratio is denoted by the Greek letter phi φ. The golden ratio is found by dividing a line into two parts such that the longer part divided by the smaller part is also equal to the whole length divided by
+the longer part. It is one of the most famous irrational numbers in mathematics. It is also called the divine proportion, the golden mean, or the golden section.
+Find the golden ratio using the elements at index 997 and 998 in the tuple fibo_seq and store it in the variable golden_ratio.
+Ans:
+  golden_ratio = int(fibo_seq[998]) / int(fibo_seq[997])
+
+
+Ques:5
+Slice the tuple fibo_seq from the 4th index to the 34th index and store it in the variable thirty_step.
+Ans:
+  thirty_step = fibo_seq[4:34]
+  thirty_step
+
+
+Ques:6
+Find the maximum Fibonacci number in the tuple fibo_seq and store it in the variable max_num.
+Numbers are stored as strings in the tuple fibo_seq so you need to convert them to integers before finding the maximum.
+Ans:
+  As the numbers are stored as strings, we need to convert them to integers before finding the maximum. We can use map() to convert all the elements in the tuple to integers.
+  max_num = max(map(int, fibo_seq))
+  max_num
+  If you are not familiar with map(), you can also use the for loop to convert the elements to integers.
+  fibo_seq_int = tuple()
+  for num in fibo_seq:
+      fibo_seq_int = fibo_seq_int + (int(num),)
+  max_num = max(fibo_seq_int)
+  max_num
+  We can use property of Fibonacci series and python indexing method to access element of the tuple.
+  Since tuple is a Fibonacci series. Therefore, the maximum number of the series will be the last element of the given Fibonacci series.
+  Thus, negative indexing method of python can be used to access last element of the tuple.
+  max_num = int(fibo_seq[-1])
+  max_num
+
+
+Ques:7
+Find the minimum Fibonacci number in the tuple fibo_seq and store it in the variable min_num.
+Numbers are stored as strings in the tuple fibo_seq so you need to convert them to integers before finding the minimum.
+Ans:
+  min_num = min(map(int, fibo_seq))
+  We can use property of Fibonacci series and python indexing method to access element of the tuple.
+  Since tuple is a Fibonacci series. Therefore the minimum number of the series will be the first element of the given Fibonacci series.
+  min_num = int(fibo_seq[0])
+  min_num
+
+
+Ques:8
+How many pixels are there in the image represented by the pixel_coordinates tuple?
+o 500
+o 400
+o 100
+o 200
+Ans:
+  len(pixel_coordinates)
+
+
+Ques:9
+In this activity, your task is to determine the value of the coordinate at index 3.
+o y-coordinate: 4
+o x-coordinate: 0
+o y-coordinate: 0
+o x-coordinate: 4
+Ans:
+  pixel_coordinates[3]
+
+
+Ques:10
+Find the coordinate of the darkest pixel in the image. The darkest pixel is the pixel with the lowest value.
+o Darkest pixel: (2, 4)
+o Darkest pixel: (4, 0)
+o Darkest pixel: (1, 2)
+o Darkest pixel: (0, 0)
+Ans:
+  darkest_pixel = min(pixel_coordinates)
+  print(darkest_pixel)
+
+
+Ques:11
+The records of students in the course A are stored in the tuple student_data_a and the records of students in the course B are stored in the tuple student_data_b.
+Concatenate the two tuples into one tuple and store it in the variable combined.
+Ans:
+  Using the + operator we can concatenate two tuples.
+  combined = student_data_a + student_data_b
+  combined
+
+
+Ques:12
+Sort the combined tuple so that we will have names in alphabetic order. Store the sorted tuple in the variable sorted_combine.
+Ans:
+  sorted_combine = tuple(sorted(combined))
+  sorted_combine
+  When we pass a tuple of tuples to the sorted() method, it will sort the tuples based on the first element of each tuple. In our case, the first element of each tuple is the name of the student. 
+  So the sorted() method will sort the tuples based on the name of the student.
+  You noticed that the sorted() method returns a list, so we need to convert it back to the tuple.
+
+
+Ques:13
+Count the Students in the combined tuple who have grades above 90. Store the count in the variable above_90.
+Ans:
+  above_90 = 0
+  for student in combined:
+      if student[1] > 90:
+          above_90 += 1
+  above_90
+
+
+Ques:14
+What is a tuple in Python
+o A mutable sequence of elements.
+o An immutable sequence of elements.
+o A built-in function in Python.
+o A collection of key-value pairs.
+Ans:
+  An immutable sequence of elements
+
+
+Ques:15
+
+Which of the following is the correct syntax to create a tuple in Python?
+o my_tuple = [1,2,3]
+o my_tuple = "1 ,2 ,3"
+o my_tuple = (1,2,3)
+o my_tuple = {1,2,3}
+Ans:
+  my_tuple = (1,2,3)
+
+
+Ques:16
+Which operator is used to concatenate two tuples in Python?
+o -
+o +
+o /
+o *
+Ans:
+  +
+
+
+Ques:17
+Which method is used to count the occurrences of a specific element in a tuple?
+o index()
+o count()
+o append()
+o remove()
+Ans:
+  count()
+
+
+Ques:18
+How do you check if an element exists in a tuple?
+o Using the in operator
+o Using the exists() method
+o Using the check() method
+o Using the contains() method
+Ans:
+  Using the in operator
+
+
+Ques:19
+Which method can be used to find the index of a specific element in a tuple?
+o get_index()
+o find()
+o search()
+o index()
+Ans:
+  index()
+
+
+Ques:20
+my_tuple = ("banana","apple", "banana", "cherry","apple","cherry")
+len(my_tuple)
+o 0
+o 4
+o 6
+o 2
+Ans:
+  6
+
+
+Ques:21
+colors = ("red", "green", "blue")
+colors[1]
+o green
+o red
+o Green
+o blue
+Ans:
+  
+green
