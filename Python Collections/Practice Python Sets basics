@@ -1,0 +1,238 @@
+Ques:1
+We have two sets s1 & s2 defined. Now take the union of set s1 with set s2. Store your answer in the variable s1_union_s2.
+Ans:
+  To take the union of two sets s1 and s2 in Python, you can use the union() method or the | operator. The union of two sets returns a new set that contains all the unique elements from both sets.
+  s1.union(s2)
+  or
+  s1_union_s2 = s1 | s2
+  Both of these methods will create a new set s1_union_s2that contains all the unique elements from both s1 and s2.
+
+
+Ques:2
+Now take the intersection of set s1 and set s2. Store your answer in the variable s1_intersection_s2.
+Ans:
+  To take the intersection of two sets s1 and s2 in Python, you can use the intersection() method or the & operator. The intersection of two sets returns a new set that contains the elements that are common to both 
+  sets.
+  s1_intersection_s2=s1.intersection(s2)
+  s1_intersection_s2 = s1 & s2
+  Both of these methods will create a new set s1_intersection_s2 that contains the elements that are present in both s1 and s2. It includes only the elements that are common to both sets.
+
+
+Ques:3
+We have two sets s1 & s2 defined. Take the difference of set s2 from set s1. Store your answer in the variable s1_difference_s2.
+Short explanation for set difference
+The set difference operation in this context refers to finding the elements that are present in s1 but not in s2. 
+In other words, it calculates the elements that are unique to s1 and excludes any elements that are also present in s2
+Ans:
+  To perform the set difference operation in Python, you can use the - operator or the difference() method. Here's how you can calculate the difference of s2 from s1 and store it in the variable s1_difference_s2:
+  s1.difference(s2)
+  or we can also use the - operator for set difference like the solution below:
+  s1_difference_s2 = s1 - s2
+  After executing this code, s1_difference_s2 will contain the elements that are in s1 but not in s2.
+
+
+Ques:4
+Is the set s1 a subset of the set s2.
+o False
+o True
+Ans:
+  s1.issubset(s2)
+
+
+Ques:5
+Let's take the symmetric difference of set s1 from set s2. And store the answer in the variable s2_symmetric_difference_s1.
+Short explanation for symmetric difference of two sets
+The symmetric difference operation on sets calculates the elements that are present in either s1 or s2, but not in both. In other words, it excludes the elements that are common to both sets.
+Ans:
+  To take the symmetric difference of two sets s1 and s2 in Python, you can use the symmetric_difference() method or the ^ operator. 
+  The symmetric difference of two sets returns a new set that contains the elements that are present in either of the sets, but not in both.
+  s2_symmetric_difference_s1=s1.symmetric_difference(s2)
+  s2_symmetric_difference_s1=s_symmetric_difference = s1 ^ s2
+  Both of these methods will create a new set s2_symmetric_difference_s1 that contains the elements that are present in either s1 or s2, but not in both sets. It excludes the elements that are common to both sets.
+
+
+Ques:6
+What will be the length of set created from the elements {2,3,4,5,5,3,9,0,1,2}.
+Ans:
+  s1={2,3,4,5,5,3,9,0,1,2}
+  len(s1)
+
+
+Ques:7
+Can we use indices on set to find elements at different positions?
+Try running:
+s1 = {1,2,3,4,5,6,0,9,8,7}
+s1[0] # try getting the first element of the set
+s1[-1] # try getting the last element 
+o Yes, Output: s1[0] gives 1
+o Yes, Output: s1[-1] gives 1
+o No, it will gives Error: python TypeError: 'set' object is not subscriptable
+Ans:
+  No, it will gives Error: python TypeError: 'set' object is not subscriptable
+
+
+Ques:8
+Find the number of capitals in the set.
+Ans:
+  len(world_capitals)
+
+
+Ques:9
+Add a new capital Ankara to the set world_capitals
+Ans:
+  world_capitals.add('Ankara')
+
+
+Ques:10
+Remove the capital Cairo from the set world_capitals
+Ans:
+  world_capitals.remove('Cairo')
+  world_capitals
+
+
+Ques:11
+Add two more capitals Delhi and London to the set world_capitals
+Important: Try to add both of them at onces, instead of adding them separately using .add() method.
+Ans:
+  world_capitals |= {'Delhi', 'London'}
+  world_capitals
+
+
+Ques:12
+Which of the following capitals are in the set world_capitals
+o Dublin
+o Paris
+o Rome
+o London
+Ans:
+  print('Rome' in world_capitals)
+  print('London' in world_capitals)
+  print('Paris' in world_capitals)
+  print('Dublin' in world_capitals)
+
+
+Ques:13
+Sort the elements in popular_languages in descending mode and store them in the variable sorted_langs, which will be a list. The result will look something like:
+>>> print(sorted_lang)
+['Swift',
+ 'Ruby',
+ 'R',
+ 'Python',
+ ...
+ 'C++',
+ 'C#']
+Ans:
+  The sorted function can be applied to different collections, including sets. By default, it'll sort the elements in ascending mode. The reverse parameter switches to descending mode:
+  sorted_langs = sorted(popular_languages, reverse=True)
+
+
+Ques:14
+Find the languages which are both popular and are also used for web development. Store your answer in popular_web_langs
+Ans:
+  popular_web_langs = popular_languages.intersection(web_languages)
+  popular_web_langs
+
+
+Ques:15
+Find the difference in mobile languages from popular languages. Store your answer in the variable diff_mobile_popular.
+Ans:
+  diff_mobile_popular = popular_languages.difference(mobile_languages)
+  diff_mobile_popular
+
+
+Ques:16
+Clear all the popular languages.
+Ans:
+  popular_languages.clear()
+  popular_languages
+
+
+Ques:17
+
+Which of the following is a valid way to create an empty set in Python?
+o s = set()
+o s = {}()
+o s = {}
+o s = set([])
+Ans:
+  s = set() and s=set([])
+
+
+Ques:18
+
+If you create a set with the individual characters of the word "Hello", how many elements will it contain?
+o 6
+o 4
+o 5
+o 3
+Ans:
+  4
+
+
+Ques:19
+Which of the following set operations returns a set containing elements that are in either of the two sets, but not in both?
+o intersection
+o union
+o difference
+o symmetric difference
+Ans:
+  symmetric differences
+
+
+Ques:20
+s1 = {1, 2, 3}
+s2 = {2, 3, 4}
+s3 = s1.difference(s2)
+s4 = s2.difference(s1)
+s5 = s3.symmetric_difference(s4)
+print(s5)
+o {}
+o {1,2,3,4}
+o set()
+o {1,4}
+Ans:
+  {1,4}
+
+
+Ques:21
+Which of the following is the correct syntax to add multiple elements to a set at once?
+o s.add(1, 2, 3)
+o s.update([1, 2, 3])
+o s.extend([1, 2, 3])
+o s |= {1, 2, 3}
+Ans:
+  
+s |= {1, 2, 3} and s.update([1, 2, 3])
+
+
+Ques:22
+Which of the following is a set comprehension that generates a set of squares of the first 10 natural numbers?
+Important: There is a difference in the definition of natural numbers; some define 0 as a natural number, while others do not. 
+In this activity, we are considering 0 as not a natural number. For more information, see Wikipedia.
+o {x for x in range(1, 11) if x % 2 == 0}
+o {x**2 for x in range(1, 11)}
+o {x**2 for x in range(10)}
+o {x for x in range(10)}
+Ans:
+  {x**2 for x in range(1, 11)}
+
+
+Ques:23
+
+Which of the following is a method that removes all elements from a set?
+o discard_all()
+o remove_all()
+o delete_all()
+o clear()
+Ans:
+  clear()
+
+
+Ques:24
+Which of the following is a method that removes a specified element from a set?
+o discard()
+o remove()
+o pop()
+o None of above
+Ans:
+  discard() and remove()
