@@ -93,3 +93,87 @@ Ans:
 
 
 Ques:8
+Check if the well-known Computer Science book Algorithms to Live By  The Computer Science of Human Decisions by Brian Christian is in the dataset.
+If it is not in the list computer_science_books then add it at the end of the list.
+Ans:
+  Part 1: Checking for membership
+  'Algorithms to Live By  The Computer Science of Human Decisions by Brian Christian' in computer_science_books 
+  Part 2: Adding the book as it is not present in the dataset
+  computer_science_books.append('Algorithms to Live By  The Computer Science of Human Decisions by Brian Christian')
+
+
+Ques:9
+Replace the Book "Pattern Recognition and Machine Learning by Christopher M. Bishop" with "Pattern Recognition and Machine Learning 2006 2nd Edition by Christopher M. Bishop".
+NOTE: You have to replace all the instances, may be there are duplicate entries
+Ans:
+  for i in range(len(computer_science_books)):
+    if computer_science_books[i] == "Pattern Recognition and Machine Learning by Christopher M. Bishop":
+        computer_science_books[i] = "Pattern Recognition and Machine Learning 2006 2nd Edition by Christopher M. Bishop"
+
+
+Ques:10
+Count the occurrences of "Python Machine Learning by Sebastian Raschka and Vahid Mirjalili" to check if there are any duplicate elements in the dataset. Store the count in the variable count_python_ml.
+Ans:
+  count_python_ml = 0
+  for book in computer_science_books:
+      if book == "Python Machine Learning by Sebastian Raschka and Vahid Mirjalili":
+          count_python_ml += 1
+  count_python_ml
+  You can also use count method of list to count the number of occurrences of an element in the list.
+  count_python_ml = computer_science_books.count("Python Machine Learning by Sebastian Raschka and Vahid Mirjalili")
+  count_python_ml
+
+
+Ques:11
+Create a new list unique_books which contains only the unique books from the list computer_science_books.
+Ans:
+  unique_books = []
+  for book in computer_science_books:
+      if book not in unique_books:
+          unique_books.append(book)
+  print(unique_books)
+
+
+Ques:12
+Sort the list computer_science_books in alphabetical order and update the list.
+Ans:
+  computer_science_books.sort()
+  computer_science_books
+
+
+Ques:13
+Create a new list less_than_60 which will have books of less than 60 characters long.
+Don't worry about the duplicates in the list.
+Ans:
+  less_than_60 = []
+  for book in computer_science_books:
+      if len(book) < 60:
+          less_than_60.append(book)
+  less_than_60
+
+
+Ques:14
+Find the book which has the shortest name and the book which has the longest name. 
+Store the book with the shortest name in the variable shortest_book and the book with the longest name in the variable longest_book.
+If there are multiple books with the same length, store the first book in the variable which comes first by alphabetical order.
+Ans:
+  shortest_book = computer_science_books[0]
+  longest_book = computer_science_books[0]
+  for book in computer_science_books:
+      if len(book) < len(shortest_book):
+          shortest_book = book
+      if len(book) > len(longest_book):
+          longest_book = book
+  print(f"Len of Longest Book : {longest_book} is : {len(longest_book)}\nLength of Shortest Book : {shortest_book} is : {len(shortest_book)}")
+
+
+Ques:15
+How many characters are there in the shortest name?
+Ans:
+  shortest = 0
+  shortest_book = computer_science_books[0]
+  for book in computer_science_books:
+      if len(book) < len(shortest_book):
+          shortest_book = book
+          shortest = len(shortest_book)
+  print(f'Length of Shortest Book : {shortest_book} is : {shortest}')
