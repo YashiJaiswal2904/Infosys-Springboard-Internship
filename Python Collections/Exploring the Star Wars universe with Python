@@ -1,0 +1,419 @@
+Ques:1
+Input the number of characters in the dataset.
+Ans:
+  len(dataset)
+
+
+Ques:2
+You should create a dictionary eye_color with the colors as keys and their counts as values. Counts are the number of characters with that eye color.
+Expected output should be a dictionary with keys as colors and values as counts.
+{'brown': 3,
+ 'blue-gray': 1,
+ 'blue': 6,
+ 'yellow': 2,
+ 'red': 2,
+ 'black': 1,
+ 'orange': 1}
+Ans:
+  eye_color = {}
+  for character in dataset:
+      eye_color.setdefault(character["eye_color"], 0)
+      eye_color[character["eye_color"]] += 1
+  eye_color
+  In the above code, we are using the setdefault method to set the default value of the key to 0 if it doesn't exist. Then we are incrementing the value by 1.
+
+
+Ques:3
+Please format the input as follows: 'brown': 6. Pay attention to the correct use of spaces and symbols.
+Ans:
+  eye_color = {}
+  for character in dataset:
+      eye_color.setdefault(character["eye_color"], 0)
+      eye_color[character["eye_color"]] += 1
+  max(eye_color.items(), key=lambda x: x[1])
+  In the above code, we are using the max function to find the maximum value in the dictionary. The max function takes two arguments: the first is the dictionary, and the second is a function that returns the value
+  to be compared. In this case, we are using a lambda function to return the value of the dictionary item.
+  If you don't know about lambda functions, you can follow below basic iteration solution:
+  eye_color = {}
+  for character in dataset:
+      eye_color.setdefault(character["eye_color"], 0)
+      eye_color[character["eye_color"]] += 1
+  max_value = 0
+  max_key = None
+  for key, value in eye_color.items():
+      if value > max_value:
+          max_value = value
+          max_key = key
+  print(max_key, max_value)
+
+
+Ques:4
+How many female characters are listed?
+Please input an integer value.
+Ans:
+  count = 0
+  for character in dataset:
+      if character["gender"] == "female":
+          count += 1
+  count
+
+
+Ques:5
+Average height of all the character will be the sum of all character heights divided by the number of characters.
+Convert the individual character height to float before calculating the average.
+Ans:
+  count = len(dataset)
+  sum_height = 0
+  for character in dataset:
+      sum_height += float(character["height"])
+  sum_height / count
+  In the above code, we are using the float function to convert the height string to a float value. Then we are adding the height to the sum_height variable. 
+  Finally, we are dividing the sum by the number of characters to get the average height.
+
+
+Ques:6
+Create a set films_set and store all the films directed by 'George Lucas'.
+Example of expected output:
+{'The Phantom Menace','Attack of the Clones',...}
+Ans:
+  films_set = set()
+  for character in dataset:
+      for film in character["films"]:
+          if film["director"] == "George Lucas":
+              films_set.add(film["title"])
+  films_set
+  In this solution, we are using a nested loop to iterate over the films and check if the director is George Lucas. If the director is George Lucas, we are adding the film title to the films_set.
+
+
+Ques:7
+Count the number of films directed by George Lucas.
+o 5
+o 3
+o 6
+o 4
+Ans:
+  4
+
+
+Ques:8
+Input the name of the character with the highest weight.
+There are some characters whose weight is 'unknown', and you have to ignore those characters.
+Ans:
+  max_weight = -1
+  character_with_highest_weight = None
+  for character in dataset:
+      weight_str = character.get('mass')
+      if weight_str.isnumeric():
+          weight = int(weight_str)
+          if weight > max_weight:
+              max_weight = weight
+              character_with_highest_weight = character.get('name')
+  print("The character with the highest weight is:", character_with_highest_weight)
+
+
+Ques:9
+Input the name of the character that is a dwarf. A dwarf is a character whose height is less than 100 cm. If there are multiple dwarfs, input the name of the character that has lowest height.
+Ans:
+  for character in dataset:
+    height_str = character.get('height')
+    if height_str.isnumeric():
+        height = int(height_str)
+        if height < 100:
+            print("The dwarf is:", character.get('name'))
+
+
+Ques:10
+Input the total number of distinct films.
+Ans:
+  films_set = set()
+  for character in dataset:
+      for film in character["films"]:
+          films_set.add(film["title"])
+  len(films_set)
+  In this solution, we are using a nested loop to iterate over the films and add the film title to the films_set. Then we are using the len function to find the number of films in the films_set.
+
+
+Ques:11
+Create a dictionary films_dict where the film's title will be the key and the list of producers as its values.
+Example of expected output:
+{'Black Bird':['Gary Kurtaz','Adult Smith'],
+'Return of the Jedi': ['Howard G. Kazanjian','George Lucas','Rick McCallum'],
+  ...
+}
+Ans:
+  films_dict = {}
+  for character in dataset:
+      for film in character["films"]:
+          producer = film["producer"]
+          if len(producer) > 1:
+              films_dict[film["title"]] = producer
+  films_dict
+  In the above code, we are using a nested loop to iterate over the films and check if the number of producers is greater than 1.
+  If the number of producers is greater than 1, we are adding the film title and the list of producers to the films_dict.
+
+
+Ques:12
+Create a dictionary films_chron where the keys will be the datetime (from the datetime module) of the film and the values will be the titles of the films.
+Example of expected output:
+{ 
+   datetime.datetime(1999, 5, 19, 0, 0): 'The Phantom Menace',
+   datetime.datetime(2002, 5, 16, 0, 0): 'Attack of the Clones',
+ ...
+ }
+Sort the films by date in ascending order.
+Ans:
+  from datetime import datetime
+  films_chron = {}
+  for character in dataset:
+      for film in character['films']:
+          date = datetime.strptime(film['release_date'], '%Y-%m-%d')
+          if date not in films_chron:
+              films_chron[date] = film['title']
+  # Updating the dictionary to sort the films by date
+  films_chron = dict(sorted(films_chron.items(), key=lambda x: x[0]))
+  In the above code, we are using the strptime function to convert the date string to a datetime object. Then we are adding the datetime object and the film title to the films_chron dictionary.
+
+
+Ques:13
+Create a list films containing the title of the films sorted in ascending lexicographical order (A>Z). films should contain distinct (or unique) values.
+Example of expected output:
+[
+  "A New Hope",
+  "Attack of the Clones",
+  ...
+  "The Phantom Menace"
+]
+Ans:
+  A simple way would be build the list, but before adding a new film, checking if it's not already there:
+  films = []
+  for character in dataset:
+      for film in character["films"]:
+          if film["title"] not in films:
+              films.append(film["title"])
+  # Finally sort:
+  films = sorted(films)
+  Alternatively, we could use a set, to leverage its feature of "unique elements":
+  films_set = set()
+  for person in dataset:
+      for film in person['films']:
+          films_set.add(film['title'])
+  films = sorted(films_set)
+
+
+Ques:14
+Create a dictionary characters_dict containing those characters that appeared in MORE than one film (ie: at least, 2 films).
+The dictonary will map the name of the character to a list of all the films they participated in. Example:
+Example of expected output:
+{
+    'Luke Skywalker': ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi'],
+    'Han Solo': ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi'],
+    'Darth Vader': ['A New Hope', 'The Empire Strikes Back', 'Return of the Jedi', 'Revenge of the Sith'],
+    ...
+}
+Ans:
+  characters_dict = {}
+  for character in dataset:
+      name = character["name"]
+      if len(character['films']) <= 1:
+          continue
+      characters_dict[name] = []
+      for film in character["films"]:
+          characters_dict[name].append(film["title"])
+  characters_dict
+
+
+Ques:15
+Create a list films_director where each element will be a tuple containing the film title and the director's name. The list should contain distinct values.
+Example of expected output:
+[('A New Hope', 'George Lucas'),
+ ('The Empire Strikes Back', 'Irvin Kershner'),
+ ('Return of the Jedi', 'Richard Marquand'),
+ ('The Phantom Menace', 'George Lucas'),
+ ...
+ ]
+Ans:
+  films_director = []
+  for character in dataset:
+      for film in character["films"]:
+          if (film["title"], film["director"]) not in films_director:
+              films_director.append((film["title"], film["director"]))
+  films_director
+
+
+Ques:16
+Create a set planets_set which will contains the names and diameters of the planets the characters are from in the form of tuples.
+Example of expected output:
+{('Nal Hutta', 12150),
+ ('Rodia', 7549),
+ ('Stewjon', 0),
+ ...
+ }
+Ans:
+  planets_set = set()
+  for character in dataset:
+      planet = character["homeworld"]
+      planets_set.add((planet["name"], int(planet["diameter"])))
+  planets_set
+
+
+Ques:17
+Create a set red_eyes_species that contains the names of the species with red eyes.
+Here, we are considering the species associated with a character, and not a character itself.
+If species has multiple eye colors, and one of them is red, then it should be included in the set.
+Expected example of output:
+{'Wookie',...}
+Ans:
+  red_eyes_species = set()
+  for character in dataset:
+      for specie in character["species"]:
+          if "red" in specie["eye_colors"]:
+              red_eyes_species.add(specie["name"])
+  red_eyes_species
+
+
+Ques:18
+Create a dictionary called skin_color_character, which contains keys representing different skin colors and values as lists of names of characters who share the same skin color. 
+The list of names of characters should be unique.
+Example of expected output:
+{'fair': ['Luke Skywalker', 'C-3PO', 'R2-D2', 'Leia Organa', 'Owen Lars'],
+ 'gold': ['Darth Vader'],
+ 'white': ['Obi-Wan Kenobi', 'Beru Whitesun lars'],
+ 'light': ['Chewbacca', 'Han Solo', 'Jabba Desilijic Tiure'],
+ 'green': ['Yoda'],
+  ...
+}
+Ans:
+  skin_color_character = {}
+  for character in dataset:
+      for skin_color in character["skin_color"]:
+          if skin_color not in skin_color_character:
+              skin_color_character[skin_color] = []
+          skin_color_character[skin_color].append(character["name"])
+  # Printing the result
+  print(skin_color_character)
+
+
+Ques:19
+Create a dictionary from_planet where the planets will be keys and the values will be the set of the character's names.
+Example of expected output:
+{'Eriadu': {'Wilhuff Tarkin'},
+ 'Kashyyyk': {'Chewbacca'},
+ 'Corellia': {'Han Solo'},
+ 'Rodia': {'Greedo'},
+ 'Nal Hutta': {'Jabba Desilijic Tiure'}}
+Ans:
+  from_planet = {}
+  for character in dataset:
+      hw = character["homeworld"]
+      from_planet.setdefault(hw["name"], set())
+      from_planet[hw["name"]].add(character["name"])
+  from_planet
+
+
+Ques:20
+Create a dictionary character_film_count where the character's name will be the key, and the count of films they appeared in will be the value. There should be no duplicate characters in the dictionary.
+Example of expected output:
+{
+    'Luke Skywalker': 4,
+    'Darth Vader': 3,
+    'Princess Leia': 3,
+    ...
+}
+Ans:
+  character_film_count = {}
+  for character in dataset:
+      name = character["name"]
+      film_count = len(character["films"])
+      character_film_count[name] = film_count
+  character_film_count
+
+
+Ques:21
+Create a list characters_appeared_in_all_films that contains the names of characters who appeared in all the films.
+Example of expected output:
+['Luke Skywalker', 'Darth Vader']
+Ans:  
+  all_films = set()
+  for character in dataset:
+      for film in character["films"]:
+          all_films.add(film["title"])
+  characters_appeared_in_all_films = []
+  for character in dataset:
+      person_films = set()
+      for film in character['films']:
+          person_films.add(film["title"])
+      if person_films == all_films:
+          characters_appeared_in_all_films.append(character['name'])
+  characters_appeared_in_all_films
+
+
+Ques:22
+There are some characters who are from the same planet, and we have to consider the planet only once. Create a dictionary planet_characters where the keys will be the planet names and the values will contains
+the diameter, population and the list of characters from that planet. The characters list should not contain any duplicates and should be sorted in ascending order.
+Example of expected output:
+{'Naboo': {'diameter': '12120',
+  'population': '4500000000',
+  'characters': ['R2-D2']},
+ 'Alderaan': {'diameter': '12500',
+  'population': '2000000000',
+  'characters': ['Leia Organa']},
+ 'Stewjon': {'diameter': '0',
+  'population': 'unknown',
+  'characters': ['Obi-Wan Kenobi']},
+ ...
+ }
+Ans:
+  planet_characters = {}
+  for character in dataset:
+      planet = character["homeworld"]
+      planet_characters.setdefault(planet["name"], {
+          "diameter": planet["diameter"],
+          "population": planet["population"],
+          "characters": []
+      })
+      planet_characters[planet["name"]]["characters"].append(character["name"])
+  for planet in planet_characters:
+      planet_characters[planet]["characters"] = sorted(set(planet_characters[planet]["characters"]))
+  planet_characters
+
+
+Ques:23
+Input the total population of all the homeworlds combined. If the population is unknown, ignore that planet.
+Ans:
+  total_population = 0
+  for planet in planet_characters:
+      population = planet_characters[planet]["population"]
+      if population.isnumeric():
+          total_population += int(population)
+  print("The total population of all the homeworlds combined is:", total_population)
+
+
+Ques:24
+Create a dictionary films_producers where the keys will be the film titles and the values will be the sets of producers.
+Ans:
+  films_producers = {}
+  for character in dataset:
+      for film in character["films"]:
+          for producer in film["producer"]:
+              films_producers.setdefault(film["title"], set()).add(producer)
+
+
+Ques:25
+Create two dictionaries male_height_mass and female_height_mass where the keys will be the names of the characters and the values will be the tuple of height and mass of the characters. 
+If the height or mass of a character is unknown, take it as 0.
+There are some characters whose gender is None and other than male or female. You have to ignore those characters.
+Convert the height and mass to int before adding them to the dictionary.
+Ans:
+  male_height_mass = {}
+  female_height_mass = {}
+  for character in dataset:
+      name = character['name']
+      gender = character['gender']
+      height = int(character['height']) if character['height'].isdigit() else 0
+      mass = int(character['mass']) if character['mass'].isdigit() else 0
+      if gender == 'male':
+          male_height_mass[name] = (height, mass)
+      elif gender == 'female':
+          female_height_mass[name] = (height, mass)
+  print("male_height_mass:", male_height_mass)
+  print("female_height_mass:", female_height_mass)
